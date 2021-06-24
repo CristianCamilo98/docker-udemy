@@ -7,4 +7,4 @@ before_install:
   -docker build -t cristiancamilo98/docker-udemy -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true USERNAME/docker-udemy npm run test
+  - docker run -e CI=true cristiancamilo98/docker-udemy npm run test
