@@ -11,7 +11,7 @@ RUN npm install
 
 COPY --chown=node:node  ./ ./
 
-RUN ls -l /home/node/app/build
+RUN ls -l /home/node/app/
 
 CMD ["npm", "run", "build"]
 
