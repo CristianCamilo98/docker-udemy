@@ -8,3 +8,19 @@ before_install:
 
 script:
   - docker run -e CI=true cristiancamilo98/docker-udemy npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-west-3"
+  app: "docker-udemy"
+  env : "Dockerudemy-env-1"
+  bucket_name: "elasticbeanstalk-eu-west-3-584462637974"
+  bucket_path: "docker-udemy"
+  on:
+    branch: master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
+
+
+
+
